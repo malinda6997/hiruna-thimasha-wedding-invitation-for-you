@@ -144,7 +144,7 @@ export default function CoupleHero() {
         <div className="hero-datetime-text hero-font-lora flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 my-2 text-sm sm:text-lg text-white font-bold tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
           <span>November 15, 2026</span>
           <span className="text-purple-300">•</span>
-          <span>10:30 AM – 04:30 PM</span>
+          <span>10:30 AM – 04:00 PM</span>
         </div>
 
         <p className="hero-quote hero-font-lora italic text-lg sm:text-2xl text-purple-100 font-medium tracking-wide max-w-2xl my-2 leading-relaxed drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
