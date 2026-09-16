@@ -33,8 +33,8 @@ export default function ContactSection() {
   );
 
   const contacts = [
-    { name: "HIRUNA", phone: "+94 70 000 0000", tel: "tel:+94700000000" },
-    { name: "THIMASHA", phone: "+94 71 000 0000", tel: "tel:+94710000000" },
+    { name: "HIRUNA", phone: "077 610 2900", tel: "tel:+94776102900" }
+    
   ];
 
   return (
