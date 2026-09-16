@@ -60,11 +60,10 @@ export default function WeddingTimeline() {
   );
 
   const events = [
-    { time: "09:30 AM", title: "Arrival of Guests", description: "Welcoming all our beloved family and friends to the venue.", icon: <Sparkles className="w-4 h-4 text-[#7e22ce]" /> },
-    { time: "10:30 AM", title: "Poruwa Ceremony", description: "The auspicious traditional poruwa rituals and exchanging vows.", icon: <Heart className="w-4 h-4 text-[#7e22ce]" /> },
+    { time: "10:30 AM", title: "Arrival of Guests", description: "Welcoming all our beloved family and friends to the venue.", icon: <Sparkles className="w-4 h-4 text-[#7e22ce]" /> },
     { time: "11:45 AM", title: "Blessings & Photography", description: "Capturing precious moments and receiving warm wishes from guests.", icon: <Clock className="w-4 h-4 text-[#7e22ce]" /> },
     { time: "12:30 PM", title: "Wedding Reception & Lunch", description: "Celebrating together with a grand feast, music, and joy.", icon: <Utensils className="w-4 h-4 text-[#7e22ce]" /> },
-    { time: "04:30 PM", title: "Going Away", description: "Bidding farewell as we embark on our journey together.", icon: <Music className="w-4 h-4 text-[#7e22ce]" /> },
+    { time: "04:00 PM", title: "Going Away", description: "Bidding farewell as we embark on our journey together.", icon: <Music className="w-4 h-4 text-[#7e22ce]" /> },
   ];
 
   return (
