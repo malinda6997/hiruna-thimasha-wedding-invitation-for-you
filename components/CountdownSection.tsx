@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Calendar, CalendarPlus } from "lucide-react";
+import { Calendar, CalendarPlus,Heart, } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -110,16 +110,28 @@ export default function CountdownSection() {
       `}</style>
 
       <div className="text-center max-w-xl mx-auto mb-10 relative z-10">
-        <div className="count-reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-300/60 bg-purple-50/80 backdrop-blur-md mb-3 shadow-sm">
-          <Calendar className="w-3.5 h-3.5 text-[#A00818]" />
-          <span className="count-font-lora text-[11px] sm:text-xs text-[#A00818] tracking-[0.25em] uppercase font-semibold">
-            {isUrgent ? "ALMOST HERE" : "COUNTING DOWN TO FOREVER"}
-          </span>
-        </div>
+        <div className="invite-reveal inline-flex items-center justify-center lg:justify-start gap-2 mb-2">
 
-        <h2 className="count-reveal count-font-cinzel text-3xl sm:text-5xl font-extrabold tracking-wider text-[#1a1820] my-2">
+            <Heart className="w-3.5 h-3.5 text-[#A00818] fill-[#A00818]/30" />
+
+            <span className="invite-font-lora text-xs text-[#A00818] tracking-[0.3em] uppercase font-semibold">
+              COUNTING DOWN TO FOREVER
+            </span>
+
+            <Heart className="w-3.5 h-3.5 text-[#A00818] fill-[#A00818]/30" />
+
+          </div>
+
+        <h2 className="invite-reveal invite-font-cinzel text-3xl sm:text-4xl font-extrabold tracking-wide text-[#1a1820] mb-3">
+            Our Wedding{" "}
+            <span className="text-[#A00818] italic font-serif">
+              Day
+            </span>
+          </h2>
+
+        {/* <h2 className="count-reveal count-font-cinzel text-3xl sm:text-5xl font-extrabold tracking-wider text-[#1a1820] my-2">
           Our Wedding Day
-        </h2>
+        </h2> */}
 
         <p className="count-reveal count-font-lora italic text-sm sm:text-lg text-[#554d63] mt-1">
           November 15, 2026 • 10:30 AM

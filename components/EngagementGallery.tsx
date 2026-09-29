@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Sparkles } from "lucide-react";
+import { Sparkles,Heart, } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -85,22 +85,24 @@ export default function EngagementGallery() {
       {/* SECTION HEADER */}
       <div className="absolute top-6 left-6 sm:left-12 z-30 flex flex-col pointer-events-none mb-6">
 
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#A00818]/20 bg-[#FFF1F2] mb-2 w-max shadow-sm">
+        <div className="invite-reveal inline-flex items-center justify-center lg:justify-start gap-2 mb-2">
 
-          <Sparkles className="w-3 h-3 text-[#A00818]" />
+            <Heart className="w-3.5 h-3.5 text-[#A00818] fill-[#A00818]/30" />
 
-          <span className="gal-font-lora text-[10px] sm:text-xs text-[#A00818] tracking-[0.25em] uppercase font-semibold">
-            ENGAGEMENT GALLERY
-          </span>
+            <span className="invite-font-lora text-xs text-[#A00818] tracking-[0.3em] uppercase font-semibold">
+              ENGAGEMET GALLERY
+            </span>
 
-        </div>
+            <Heart className="w-3.5 h-3.5 text-[#A00818] fill-[#A00818]/30" />
 
-        <h2 className="gal-font-cinzel text-xl sm:text-3xl font-extrabold tracking-wide text-[#1a1820]">
-          Our Precious{" "}
-          <span className="text-[#A00818] italic font-serif">
-            Story
-          </span>
-        </h2>
+          </div>
+        <h2 className="invite-reveal invite-font-cinzel text-3xl sm:text-4xl font-extrabold tracking-wide text-[#1a1820] mb-3">
+            Our Precious{" "}
+            <span className="text-[#A00818] italic font-serif">
+              Story
+            </span>
+          </h2>
+
       </div>
 
       {/* PROGRESS DOTS */}

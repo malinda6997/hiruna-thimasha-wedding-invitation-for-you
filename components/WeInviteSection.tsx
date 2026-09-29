@@ -274,7 +274,7 @@ export default function WeInviteSection() {
           </div>
 
           {/* TITLE */}
-          <h2 className="invite-reveal invite-font-cinzel text-2xl sm:text-4xl font-extrabold tracking-wide text-[#1a1820] mb-3">
+          <h2 className="invite-reveal invite-font-cinzel text-3xl sm:text-4xl font-extrabold tracking-wide text-[#1a1820] mb-3">
             We Invite{" "}
             <span className="text-[#A00818] italic font-serif">
               You
@@ -371,7 +371,7 @@ export default function WeInviteSection() {
 
             <a
               href="/assets/invite-couple.png"
-              download="Hiruna_Thimasha_Wedding_Invitation.png"
+              download="wedding_card.png"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-10 py-4 rounded-full bg-[#A00818] text-white active:bg-[#7F000C] transition-all duration-300 shadow-xl shadow-[#7F000C]/30 animate-continuous-bounce font-sans text-sm sm:text-base font-bold tracking-widest uppercase"
