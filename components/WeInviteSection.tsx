@@ -377,7 +377,7 @@ export default function WeInviteSection() {
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-10 py-4 rounded-full bg-[#A00818] text-white active:bg-[#7F000C] transition-all duration-300 shadow-xl shadow-[#7F000C]/30 animate-continuous-bounce font-sans text-sm sm:text-base font-bold tracking-widest uppercase"
             >
               <Download className="w-4 h-4" />
-              Download Invitation Card
+              Download Invitation
             </a>
 
           </div>
