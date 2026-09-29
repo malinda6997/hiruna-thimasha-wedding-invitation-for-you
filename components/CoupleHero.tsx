@@ -26,8 +26,7 @@ export default function CoupleHero() {
         yoyo: true,
       });
 
-      // Subtle parallax drift on the hero photo as the user scrolls away —
-      // cheap on mobile GPUs and makes the exit feel intentional.
+      // Subtle parallax drift on the hero photo as the user scrolls away
       gsap.to(bgRef.current, {
         yPercent: 15,
         scale: 1.08,
@@ -45,30 +44,57 @@ export default function CoupleHero() {
       tl.fromTo(
         ".hero-badge",
         { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.7, ease: "power2.out", delay: 0.1 }
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power2.out",
+          delay: 0.1,
+        }
       )
         .fromTo(
           ".hero-title-main",
           { opacity: 0, scale: 0.95, y: 20 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.9, ease: "power2.out" },
+          {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power2.out",
+          },
           "-=0.4"
         )
         .fromTo(
           ".hero-datetime-text",
           { opacity: 0, y: 15 },
-          { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power2.out",
+          },
           "-=0.5"
         )
         .fromTo(
           ".hero-quote",
           { opacity: 0, y: 12 },
-          { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power2.out",
+          },
           "-=0.5"
         )
         .fromTo(
           ".hero-scroll-btn",
           { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          },
           "-=0.4"
         );
     },
@@ -95,9 +121,9 @@ export default function CoupleHero() {
           background-image: linear-gradient(
             120deg,
             #ffffff 0%,
-            #e9d5ff 25%,
-            #c084fc 50%,
-            #d8b4fe 75%,
+            #fecdd3 25%,
+            #A00818 50%,
+            #fda4af 75%,
             #ffffff 100%
           );
           background-size: 300% 100%;
@@ -113,7 +139,7 @@ export default function CoupleHero() {
         <RosePetals />
       </div>
 
-      {/* 1. BACKGROUND PHOTO (with parallax) */}
+      {/* 1. BACKGROUND PHOTO */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           ref={bgRef}
@@ -121,36 +147,50 @@ export default function CoupleHero() {
           alt="Hiruna and Thimasha Wedding"
           className="w-full h-full object-cover object-[center_35%] sm:object-center brightness-[0.72] will-change-transform"
         />
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 via-60% to-[#030206]" />
       </div>
 
-      {/* 2. PURPLE AMBIENT MESH */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[340px] sm:w-[800px] h-[250px] sm:h-[450px] rounded-full bg-gradient-to-t from-[#581c87]/80 via-[#3b0764]/50 to-transparent blur-[60px] md:blur-[140px] pointer-events-none z-1" />
+      {/* 2. RED AMBIENT MESH */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[340px] sm:w-[800px] h-[250px] sm:h-[450px] rounded-full bg-gradient-to-t from-[#A00818]/80 via-[#8C0000]/50 to-transparent blur-[60px] md:blur-[140px] pointer-events-none z-1" />
 
       {/* 3. HERO CONTENT WRAPPER */}
       <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-2">
-        <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-400/40 bg-purple-950/70 backdrop-blur-md mb-3 shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-          <Heart className="w-3.5 h-3.5 text-purple-300 fill-purple-300/40" />
-          <span className="hero-font-lora text-xs sm:text-sm text-purple-100 tracking-wider uppercase font-semibold">
+
+        {/* Wedding Badge */}
+        <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#A00818]/60 bg-[#3D0008]/70 backdrop-blur-md mb-3 shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+
+          <Heart className="w-3.5 h-3.5 text-[#FDA4AF] fill-[#A00818]/40" />
+
+          <span className="hero-font-lora text-xs sm:text-sm text-[#FFE4E6] tracking-wider uppercase font-semibold">
             Wedding Invitation
           </span>
-          <Heart className="w-3.5 h-3.5 text-purple-300 fill-purple-300/40" />
+
+          <Heart className="w-3.5 h-3.5 text-[#FDA4AF] fill-[#A00818]/40" />
         </div>
 
+        {/* Main Title */}
         <h1 className="hero-title-main hero-font-cinzel animated-text-gradient text-4xl sm:text-7xl md:text-8xl font-black tracking-widest drop-shadow-[0_4px_25px_rgba(0,0,0,0.95)] my-2">
           HIRUNA & THIMASHA
         </h1>
 
+        {/* Date & Time */}
         <div className="hero-datetime-text hero-font-lora flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 my-2 text-sm sm:text-lg text-white font-bold tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
+
           <span>November 15, 2026</span>
-          <span className="text-purple-300">•</span>
+
+          <span className="text-[#A00818]">•</span>
+
           <span>10:30 AM – 04:00 PM</span>
+
         </div>
 
-        <p className="hero-quote hero-font-lora italic text-lg sm:text-2xl text-purple-100 font-medium tracking-wide max-w-2xl my-2 leading-relaxed drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
+        {/* Quote */}
+        <p className="hero-quote hero-font-lora italic text-lg sm:text-2xl text-[#FFE4E6] font-medium tracking-wide max-w-2xl my-2 leading-relaxed drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
           The beautiful beginning of two hearts bound together...
         </p>
 
+        {/* Scroll Button */}
         <div className="hero-scroll-btn mt-6 sm:mt-8">
           <button
             aria-label="Scroll to our story"
@@ -158,13 +198,17 @@ export default function CoupleHero() {
               const nextSection = document.getElementById("chapter-story");
               nextSection?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="flex flex-col items-center gap-1.5 text-purple-100 active:text-white transition-colors duration-300 group cursor-pointer"
+            className="flex flex-col items-center gap-1.5 text-[#FFE4E6] active:text-white transition-colors duration-300 group cursor-pointer"
           >
+
             <span className="hero-font-lora text-xs sm:text-sm tracking-wider uppercase font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
               Discover Our Story
             </span>
-            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full border border-purple-400/50 bg-black/50 flex items-center justify-center group-active:border-purple-300 group-active:bg-purple-600/40 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-              <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce text-purple-200" />
+
+            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full border border-[#A00818]/60 bg-black/50 flex items-center justify-center group-active:border-[#FDA4AF] group-active:bg-[#A00818]/40 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+
+              <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce text-[#FDA4AF]" />
+
             </div>
           </button>
         </div>

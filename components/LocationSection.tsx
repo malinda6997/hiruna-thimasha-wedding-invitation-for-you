@@ -56,10 +56,10 @@ export default function LocationSection() {
         
         {/* ICON BADGE */}
         <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center border border-purple-200 mb-2.5 shadow-inner">
-          <MapPin className="w-5 h-5 text-[#7e22ce]" />
+          <MapPin className="w-5 h-5 text-[#A00818]" />
         </div>
 
-        <span className="loc-font-lora text-[11px] text-[#7e22ce] tracking-[0.25em] uppercase font-semibold mb-1">
+        <span className="loc-font-lora text-[11px] text-[#A00818] tracking-[0.25em] uppercase font-semibold mb-1">
           VENUE & DIRECTIONS
         </span>
 

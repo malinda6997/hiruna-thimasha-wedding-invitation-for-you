@@ -31,7 +31,8 @@ export default function EngagementGallery() {
       const track = trackRef.current;
       if (!track) return;
 
-      const getScrollAmount = () => track.scrollWidth - window.innerWidth;
+      const getScrollAmount = () =>
+        track.scrollWidth - window.innerWidth;
 
       const tween = gsap.to(track, {
         x: () => -getScrollAmount(),
@@ -41,17 +42,19 @@ export default function EngagementGallery() {
           pin: true,
           scrub: 1,
           end: () => "+=" + track.scrollWidth,
-          invalidateOnRefresh: true, // recalculates on resize/orientation change
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
-            const idx = Math.round(self.progress * (photos.length - 1));
+            const idx = Math.round(
+              self.progress * (photos.length - 1)
+            );
+
             setActiveIndex(idx);
           },
         },
       });
 
-      // Recompute pin distance if the phone rotates or the address bar
-      // shows/hides (both change window.innerWidth on mobile).
       const handleResize = () => ScrollTrigger.refresh();
+
       window.addEventListener("resize", handleResize);
 
       return () => {
@@ -69,58 +72,91 @@ export default function EngagementGallery() {
     >
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-        .gal-font-cinzel { font-family: 'Cinzel', serif; }
-        .gal-font-lora { font-family: 'Lora', serif; }
+
+        .gal-font-cinzel {
+          font-family: 'Cinzel', serif;
+        }
+
+        .gal-font-lora {
+          font-family: 'Lora', serif;
+        }
       `}</style>
 
+      {/* SECTION HEADER */}
       <div className="absolute top-6 left-6 sm:left-12 z-30 flex flex-col pointer-events-none mb-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-200 bg-purple-50 mb-2 w-max shadow-sm">
-          <Sparkles className="w-3 h-3 text-[#7e22ce]" />
-          <span className="gal-font-lora text-[10px] sm:text-xs text-[#7e22ce] tracking-[0.25em] uppercase font-semibold">
+
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#A00818]/20 bg-[#FFF1F2] mb-2 w-max shadow-sm">
+
+          <Sparkles className="w-3 h-3 text-[#A00818]" />
+
+          <span className="gal-font-lora text-[10px] sm:text-xs text-[#A00818] tracking-[0.25em] uppercase font-semibold">
             ENGAGEMENT GALLERY
           </span>
+
         </div>
+
         <h2 className="gal-font-cinzel text-xl sm:text-3xl font-extrabold tracking-wide text-[#1a1820]">
-          Our Precious <span className="text-[#7e22ce] italic font-serif">Story</span>
+          Our Precious{" "}
+          <span className="text-[#A00818] italic font-serif">
+            Story
+          </span>
         </h2>
       </div>
 
-      {/* PROGRESS DOTS — orients the guest during horizontal scroll-jack */}
+      {/* PROGRESS DOTS */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5">
+
         {photos.map((_, i) => (
           <div
             key={i}
             className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === activeIndex ? "w-5 bg-[#7e22ce]" : "w-1.5 bg-purple-200"
+              i === activeIndex
+                ? "w-5 bg-[#A00818]"
+                : "w-1.5 bg-[#F3C1C7]"
             }`}
           />
         ))}
+
       </div>
 
-      <div ref={trackRef} className="flex items-center w-max h-full pt-16">
+      {/* HORIZONTAL IMAGE TRACK */}
+      <div
+        ref={trackRef}
+        className="flex items-center w-max h-full pt-16"
+      >
+
         {photos.map((photo, index) => (
           <div
             key={index}
             className="relative w-screen h-screen flex-shrink-0 flex items-center justify-center p-4 sm:p-12 overflow-hidden"
           >
-            <div className="relative w-full h-full max-w-5xl max-h-[78vh] rounded-3xl overflow-hidden shadow-2xl bg-white border border-purple-100 flex items-center justify-center mt-12 sm:mt-16">
+
+            <div className="relative w-full h-full max-w-5xl max-h-[78vh] rounded-3xl overflow-hidden shadow-2xl bg-white border border-[#A00818]/15 flex items-center justify-center mt-12 sm:mt-16">
+
               <img
                 src={photo.src}
                 alt={photo.title}
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-950/80 via-purple-950/20 to-transparent flex flex-col justify-end p-8 sm:p-12">
-                <span className="gal-font-cinzel text-xs sm:text-sm font-bold text-purple-200 uppercase tracking-[0.3em] mb-2">
+
+              {/* RED IMAGE OVERLAY */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3D0008]/85 via-[#5C0712]/20 to-transparent flex flex-col justify-end p-8 sm:p-12">
+
+                <span className="gal-font-cinzel text-xs sm:text-sm font-bold text-[#FDA4AF] uppercase tracking-[0.3em] mb-2">
                   Memory 0{index + 1} / 08
                 </span>
+
                 <h3 className="gal-font-cinzel text-2xl sm:text-4xl font-extrabold text-white tracking-wide">
                   {photo.title}
                 </h3>
+
               </div>
+
             </div>
           </div>
         ))}
+
       </div>
     </section>
   );

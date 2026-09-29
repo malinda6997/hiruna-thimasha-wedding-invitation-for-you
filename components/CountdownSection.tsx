@@ -111,8 +111,8 @@ export default function CountdownSection() {
 
       <div className="text-center max-w-xl mx-auto mb-10 relative z-10">
         <div className="count-reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-300/60 bg-purple-50/80 backdrop-blur-md mb-3 shadow-sm">
-          <Calendar className="w-3.5 h-3.5 text-[#7e22ce]" />
-          <span className="count-font-lora text-[11px] sm:text-xs text-[#7e22ce] tracking-[0.25em] uppercase font-semibold">
+          <Calendar className="w-3.5 h-3.5 text-[#A00818]" />
+          <span className="count-font-lora text-[11px] sm:text-xs text-[#A00818] tracking-[0.25em] uppercase font-semibold">
             {isUrgent ? "ALMOST HERE" : "COUNTING DOWN TO FOREVER"}
           </span>
         </div>
@@ -139,10 +139,10 @@ export default function CountdownSection() {
               isUrgent ? "urgent-pulse border-purple-300" : ""
             }`}
           >
-            <span className={`count-font-cinzel text-4xl sm:text-6xl font-black tracking-wider ${i === 3 ? "text-[#7e22ce]" : "text-[#1a1820]"}`}>
+            <span className={`count-font-cinzel text-4xl sm:text-6xl font-black tracking-wider ${i === 3 ? "text-[#A00818]" : "text-[#1a1820]"}`}>
               {formatNumber(item.value)}
             </span>
-            <span className="count-font-lora text-[10px] sm:text-xs text-[#7e22ce] tracking-[0.2em] uppercase font-semibold mt-2">
+            <span className="count-font-lora text-[10px] sm:text-xs text-[#A00818] tracking-[0.2em] uppercase font-semibold mt-2">
               {item.label}
             </span>
           </div>
@@ -152,7 +152,7 @@ export default function CountdownSection() {
       <div className="count-reveal relative z-10 flex justify-center">
         <button
           onClick={handleAddToCalendar}
-          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#7e22ce] text-white active:bg-[#6b21a8] transition-all duration-300 shadow-xl shadow-purple-950/25 animate-continuous-bounce count-font-cinzel text-xs sm:text-sm font-bold tracking-widest uppercase cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#A00818] text-white active:bg-[#6b21a8] transition-all duration-300 shadow-xl shadow-purple-950/25 animate-continuous-bounce count-font-cinzel text-xs sm:text-sm font-bold tracking-widest uppercase cursor-pointer"
         >
           <CalendarPlus className="w-4 h-4" />
           <span>Add to Calendar</span>

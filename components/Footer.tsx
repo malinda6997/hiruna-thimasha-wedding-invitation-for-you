@@ -46,8 +46,8 @@ export default function Footer() {
       <div />
 
       <div className="footer-reveal my-auto text-center flex flex-col items-center max-w-md">
-        <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center border border-purple-200 text-[#7e22ce] mb-5 shadow-sm">
-          <Heart className="w-6 h-6 fill-[#7e22ce]/30 animate-pulse" />
+        <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center border border-purple-200 text-[#A00818] mb-5 shadow-sm">
+          <Heart className="w-6 h-6 fill-[#A00818]/30 animate-pulse" />
         </div>
 
         <h3 className="footer-font-cinzel text-3xl sm:text-4xl font-extrabold tracking-wider text-[#1a1820] mb-3 uppercase">
@@ -62,7 +62,7 @@ export default function Footer() {
       <div className="footer-reveal text-center text-xs text-[#554d63]/80 tracking-wider footer-font-lora">
         <p>
           © 2026 Hiruna & Thimasha Wedding. Developed with precision by{" "}
-          <span className="text-[#7e22ce] font-semibold tracking-normal">Malinda Prabath</span>.
+          <span className="text-[#A00818] font-semibold tracking-normal">Malinda Prabath</span>.
         </p>
       </div>
     </footer>

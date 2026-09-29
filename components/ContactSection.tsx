@@ -50,11 +50,11 @@ export default function ContactSection() {
 
       <div className="w-full max-w-md mx-auto flex flex-col items-center text-center">
         <div className="contact-reveal inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-purple-200 bg-purple-50 mb-3 shadow-sm">
-          <Sparkles className="w-3 h-3 text-[#7e22ce]" />
-          <span className="contact-font-lora text-[11px] text-[#7e22ce] tracking-[0.25em] uppercase font-semibold">
+          <Sparkles className="w-3 h-3 text-[#A00818]" />
+          <span className="contact-font-lora text-[11px] text-[#A00818] tracking-[0.25em] uppercase font-semibold">
             FOREVER TOGETHER
           </span>
-          <Sparkles className="w-3 h-3 text-[#7e22ce]" />
+          <Sparkles className="w-3 h-3 text-[#A00818]" />
         </div>
 
         <h2 className="contact-reveal contact-font-cinzel text-2xl sm:text-3xl font-extrabold tracking-wide text-[#1a1820] mb-2 uppercase">
@@ -72,11 +72,11 @@ export default function ContactSection() {
               href={contact.tel}
               className="group flex items-center gap-3.5 p-3 rounded-xl bg-white border border-purple-100 shadow-md shadow-purple-950/5 active:border-purple-300 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center border border-purple-200 text-[#7e22ce] group-active:bg-[#7e22ce] group-active:text-white transition-colors flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center border border-purple-200 text-[#A00818] group-active:bg-[#A00818] group-active:text-white transition-colors flex-shrink-0">
                 <Phone className="w-4 h-4" />
               </div>
               <div className="text-left overflow-hidden">
-                <span className="contact-font-cinzel text-[11px] font-bold text-[#7e22ce] tracking-wider uppercase block">
+                <span className="contact-font-cinzel text-[11px] font-bold text-[#A00818] tracking-wider uppercase block">
                   {contact.name}
                 </span>
                 <span className="contact-font-lora text-xs sm:text-sm font-semibold text-[#1a1820] block">
@@ -90,8 +90,8 @@ export default function ContactSection() {
         <div className="contact-reveal w-full text-center text-[11px] text-[#554d63] tracking-wider contact-font-lora pt-4 border-t border-purple-100/60">
           <p className="mb-1">© 2026 Hiruna & Thimasha. All Rights Reserved.</p>
           <p className="flex items-center justify-center gap-1.5">
-            Developed with <Heart className="w-3 h-3 text-[#7e22ce] fill-[#7e22ce]" /> by{" "}
-            <span className="text-[#7e22ce] font-bold tracking-normal font-sans uppercase">Malinda Prabath</span>
+            Developed with <Heart className="w-3 h-3 text-[#A00818] fill-[#A00818]" /> by{" "}
+            <span className="text-[#A00818] font-bold tracking-normal font-sans uppercase">Malinda Prabath</span>
           </p>
         </div>
       </div>
