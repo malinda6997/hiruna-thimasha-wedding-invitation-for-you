@@ -167,7 +167,7 @@ export default function StorySection() {
       <div className="w-full max-w-md mx-auto flex flex-col items-center text-center">
 
         {/* COUPLE PHOTO */}
-        <div className="story-reveal relative w-[280px] sm:w-[340px] h-[360px] sm:h-[420px] rounded-t-[180px] rounded-b-3xl overflow-hidden border-4 border-[#F3C1C7] bg-[#FFF1F2] mb-8 p-1 animated-red-shadow">
+        <div className="story-reveal relative w-[280px] sm:w-[340px] h-[360px] sm:h-[420px] rounded-t-[180px] rounded-b-3xl overflow-hidden border-4 border-[#A00818] bg-[#FFF1F2] mb-8 p-1 animated-red-shadow">
 
           <div className="w-full h-full rounded-t-[170px] rounded-b-2xl overflow-hidden relative">
 

@@ -147,8 +147,8 @@ export default function CountdownSection() {
         ].map((item, i) => (
           <div
             key={item.label}
-            className={`countdown-card flex flex-col items-center justify-center p-5 sm:p-7 rounded-2xl bg-white border border-purple-100 shadow-xl shadow-purple-950/5 active:border-purple-300 active:-translate-y-1 transition-all duration-300 ${
-              isUrgent ? "urgent-pulse border-purple-300" : ""
+            className={`countdown-card flex flex-col items-center justify-center p-5 sm:p-7 rounded-2xl bg-white border border-[#F3C1C7] shadow-xl shadow-purple-950/5 active:border-[#A00818] active:-translate-y-1 transition-all duration-300 ${
+              isUrgent ? "urgent-pulse border-[#F3C1C7]" : ""
             }`}
           >
             <span className={`count-font-cinzel text-4xl sm:text-6xl font-black tracking-wider ${i === 3 ? "text-[#A00818]" : "text-[#1a1820]"}`}>
